@@ -5,11 +5,11 @@
 
 let numbers=[];
 
-for(let j,i=0; i<6; i++){
+for(let j=0,i=0; i<6; i++){
     var n =Number(prompt("Inserisci un numero"));
     console.log(n);
 
-    if(numbers[i] % 2 != 0){
+    if(n % 2 != 0){
         numbers[j++]=n;
     }
 }
