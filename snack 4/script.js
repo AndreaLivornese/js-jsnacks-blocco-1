@@ -3,8 +3,9 @@
 
 const input = prompt("inserisci un numero");
 
-if(input.length > 4){
-    alert("Devi inserire un numero massimo di 4 cifre... riaggiorna la pagina per riprovare")
+
+if(isNaN(input)){
+    alert("valore non numerico inserito...ricarica la pagina ed inserisci un numero!");
 }else{
     
     let numeri=[];
@@ -22,3 +23,4 @@ if(input.length > 4){
     document.querySelector("#result").innerText = "La somma delle cifre del numero inserito è: " + somma;
 
 }
+
