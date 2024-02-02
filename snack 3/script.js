@@ -3,15 +3,24 @@
 // Solo se è dispari inseriscilo nell’array.
 // Stampa a schermo il contenuto dell'array
 
+
+const inputOlElement= document.querySelector("#input");
+const outputOlElement= document.querySelector("#output");
 let numbers=[];
+
+let liElement;
 
 for(let j=0,i=0; i<6; i++){
     var n =Number(prompt("Inserisci un numero"));
-    console.log(n);
+
+    liElement = document.createElement("li");
+    liElement.innerText = n;
+    inputOlElement.append(liElement);
 
     if(n % 2 != 0){
-        numbers[j++]=n;
+        numbers[j]=n;
+        liElement = document.createElement("li");
+        liElement.innerText = numbers[j++];
+        outputOlElement.append(liElement);
     }
 }
-
-console.log(numbers);
